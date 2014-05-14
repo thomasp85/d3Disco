@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>d3Disco</title>
+		<script src="shared/jquery.js" type="text/javascript"></script>
+		<script src="shared/shiny.js" type="text/javascript"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="script.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="css" href="style.css">
+	</head>
+	<body onload="disco.init()">
+		<div>
+			<h1>d3 Disco - An example of interfacing shiny and d3.js</h1>
+			<div id="plot" class="shiny-output-plot"></div>
+			<div>
+				<p>
+					This page tries to give a minimal example of how to interface R and d3.js using the shiny package. It contains a custom output and a custom d3 based plot function. The shiny server instance is generating circles at random timepoints and with random attributes (x, y, radius, colour and exit function) and sends these to the client, where they are fed into the d3 function.
+					
+				</p>
+				<p>
+					For more involved applications it would probably be better to define a local datamodel on the client, where data from the server is added. The datamodel would then trigger a change event which could be picked up by the d3 plotting function. This setup makes it easier for several unrelated d3 plots to depend on the same data and update automatically when new data arrives.
+				</p>
+				<p>
+					
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
